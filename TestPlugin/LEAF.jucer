@@ -10,7 +10,7 @@
               pluginRTASCategory="" aaxIdentifier="com.pumusic.LEAF" pluginAAXCategory="2"
               companyName="Princeton University" companyEmail="mrmulshine@gmail.com"
               displaySplashScreen="1" reportAppUsage="1" splashScreenColour="Dark"
-              buildStandalone="1" enableIAA="0" cppLanguageStandard="11" companyCopyright="Princeton University"
+              buildStandalone="1" enableIAA="0" companyCopyright="Princeton University"
               pluginFormats="buildAU,buildStandalone" pluginCharacteristicsValue="pluginWantsMidiIn"
               jucerFormatVersion="1">
   <MAINGROUP id="F7Bywq" name="LEAF">
@@ -107,7 +107,7 @@
     </GROUP>
   </MAINGROUP>
   <EXPORTFORMATS>
-    <XCODE_MAC targetFolder="Builds/MacOSX" microphonePermissionNeeded="1">
+    <XCODE_MAC targetFolder="Builds/MacOSX" microphonePermissionNeeded="1" extraDefs="JUCE_MODAL_LOOPS_PERMITTED=1">
       <CONFIGURATIONS>
         <CONFIGURATION name="Debug" isDebug="1" optimisation="1" targetName="LEAF" enablePluginBinaryCopyStep="1"/>
         <CONFIGURATION name="Release" isDebug="0" optimisation="3" targetName="LEAF"
@@ -158,7 +158,7 @@
         <MODULEPATH id="juce_audio_utils" path="../../../../JUCE/modules"/>
       </MODULEPATHS>
     </XCODE_IPHONE>
-    <VS2017 targetFolder="Builds/VisualStudio2017">
+    <VS2017 targetFolder="Builds/VisualStudio2017" extraDefs="JUCE_MODAL_LOOPS_PERMITTED=1">
       <CONFIGURATIONS>
         <CONFIGURATION name="Debug" winWarningLevel="4" generateManifest="1" winArchitecture="x64"
                        isDebug="1" optimisation="1" targetName="LEAF" debugInformationFormat="ProgramDatabase"
@@ -185,6 +185,29 @@
         <MODULEPATH id="juce_audio_basics" path="..\..\..\JUCE\modules"/>
       </MODULEPATHS>
     </VS2017>
+    <VS2022 targetFolder="Builds/VisualStudio2022" extraDefs="JUCE_MODAL_LOOPS_PERMITTED=1">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug"/>
+        <CONFIGURATION isDebug="0" name="Release"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="C:\Users\yli\Downloads\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_devices" path="C:\Users\yli\Downloads\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_formats" path="C:\Users\yli\Downloads\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="C:\Users\yli\Downloads\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_processors" path="C:\Users\yli\Downloads\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_utils" path="C:\Users\yli\Downloads\JUCE\modules"/>
+        <MODULEPATH id="juce_core" path="C:\Users\yli\Downloads\JUCE\modules"/>
+        <MODULEPATH id="juce_cryptography" path="C:\Users\yli\Downloads\JUCE\modules"/>
+        <MODULEPATH id="juce_data_structures" path="C:\Users\yli\Downloads\JUCE\modules"/>
+        <MODULEPATH id="juce_events" path="C:\Users\yli\Downloads\JUCE\modules"/>
+        <MODULEPATH id="juce_graphics" path="C:\Users\yli\Downloads\JUCE\modules"/>
+        <MODULEPATH id="juce_gui_basics" path="C:\Users\yli\Downloads\JUCE\modules"/>
+        <MODULEPATH id="juce_gui_extra" path="C:\Users\yli\Downloads\JUCE\modules"/>
+        <MODULEPATH id="juce_opengl" path="C:\Users\yli\Downloads\JUCE\modules"/>
+        <MODULEPATH id="juce_video" path="C:\Users\yli\Downloads\JUCE\modules"/>
+      </MODULEPATHS>
+    </VS2022>
   </EXPORTFORMATS>
   <MODULES>
     <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
